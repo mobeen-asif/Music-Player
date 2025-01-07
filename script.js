@@ -165,6 +165,7 @@ progress_div.addEventListener("click", (event) => {
   audio.currentTime = move_progress;
 });
 
+loadSongs(songs[songIndex]);
 audio.addEventListener("ended", nextSong);
 next.addEventListener("click", nextSong);
 prev.addEventListener("click", prevSong);
