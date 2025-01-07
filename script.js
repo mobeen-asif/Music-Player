@@ -167,6 +167,7 @@ progress_div.addEventListener("click", (event) => {
   let move_progress = (event.offsetX / event.srcElement.clientWidth) * duration;
   audio.currentTime = move_progress;
 });
+
 loadSongs(songs[songIndex]);
 audio.addEventListener("ended", nextSong);
 next.addEventListener("click", nextSong);
