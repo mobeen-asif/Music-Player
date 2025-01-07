@@ -146,6 +146,9 @@ audio.addEventListener("timeupdate", (event) => {
   progress.style.width = `${progress_time}%`;
   let min_duration = Math.floor(duration / 60);
   let sec_duration = Math.floor(duration % 60);
+  if (sec_duration < 10) {
+    sec_duration = `0${sec_duration}`;
+  }
   let max_duration = `${min_duration}:${sec_duration}`;
   if (duration) {
     total_duration.textContent = `${max_duration}`;
@@ -164,7 +167,7 @@ progress_div.addEventListener("click", (event) => {
   let move_progress = (event.offsetX / event.srcElement.clientWidth) * duration;
   audio.currentTime = move_progress;
 });
-
+loadSongs(songs[songIndex]);
 audio.addEventListener("ended", nextSong);
 next.addEventListener("click", nextSong);
 prev.addEventListener("click", prevSong);
