@@ -19,7 +19,7 @@ body {
   #player {
     width: 350px;
     height: 500px;
-    border-radius: 50px;
+    border-radius: 25px;
     background-color: #edf4f2;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     h1 {
@@ -51,7 +51,7 @@ body {
     }
     #image-container {
       width: 100%;
-      height: 50%;
+      height: 45%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -60,7 +60,7 @@ body {
     #controls {
       width: 100%;
       height: 15%;
-      margin-top: 10px;
+      margin-top: 1px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -78,6 +78,51 @@ body {
         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
           rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
           rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      }
+      #play {
+        font-size: 2.5rem;
+        background-color: black;
+        color: white;
+      }
+    }
+    .progress-bar-container {
+      width: 100%;
+      height: auto;
+      padding: 0rem 1rem;
+      margin-top: 0.8rem;
+      margin-bottom: 0.8rem;
+      .progress-div {
+        background-color: #dadada;
+        width: 100%;
+        height: 0.5rem;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+          0 2px 4px rgba(0, 0, 0, 0.07) 0 4px 8px rbga(0, 0, 0, 0.07),
+          0 8px 16px rgba(0, 0, 0, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07),
+          0 32px 64px rgba(0, 0, 0, 0.07);
+        border-radius: 4rem;
+        position: relative;
+        // margin-top: 0.5rem;
+        transition: width 1s linear;
+        -moz-transition: width 1s linear;
+        -o-transition: width 1s linear;
+        -webkit-transition: width 1s linear;
+        cursor: pointer;
+        -webkit-appearance: none;
+        appearance: none;
+        .progress {
+          border-radius: 4rem;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          background-color: black;
+        }
+      }
+      .progress-duration {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+        margin-bottom: 5px;
       }
     }
   }
